@@ -1,0 +1,51 @@
+.app-game {
+  display: flex;
+  grid-gap: 1rem;
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 1.4rem;
+    cursor: pointer;
+    border: 0;
+    border-radius: 90px;
+
+    &.blue {
+      background-color: #2980b9;
+      border: 6px solid transparent;
+
+      &.active {
+        border: 6px solid #6eb5e4;
+      }
+    }
+
+    &.red {
+      background-color: #e74c3c;
+
+      &.active {
+        border: 6px solid #f26e60;
+      }
+    }
+
+    &.yellow {
+      background-color: #f1c40f;
+
+      &.active {
+        border: 6px solid #f5d44f;
+      }
+    }
+
+    &.green {
+      background-color: #2ecc71;
+
+      &.active {
+        border: 6px solid #60e296;
+      }
+    }
+
+    &.active {
+      border: 6px solid #fff !important;
+    }
+  }
+}

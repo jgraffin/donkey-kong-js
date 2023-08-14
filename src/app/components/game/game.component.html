@@ -1,0 +1,22 @@
+<h2
+  style="
+    color: white;
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    text-align: center;
+  "
+>
+  {{ status.level }}
+  <span *ngIf="status.result"> - Acertou!</span>
+</h2>
+<div class="app-game">
+  <button
+    *ngFor="let item of ITEMS; let i = index"
+    id="{{ i }}"
+    class="app-game-button {{ item }}"
+    (click)="onSelectColor(i)"
+  >
+    {{ item }}
+  </button>
+</div>
