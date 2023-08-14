@@ -1,5 +1,11 @@
 import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
 
+interface StatusGame {
+  level: number;
+  result: boolean;
+  selected: number[];
+}
+
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -15,10 +21,10 @@ export class GameComponent implements AfterViewInit {
   _ = this;
   listColors: number[] = [];
 
-  status = {
+  status: StatusGame = {
     level: 1,
     result: false,
-    selected: [] as any,
+    selected: [],
   };
 
   ngAfterViewInit(): void {
