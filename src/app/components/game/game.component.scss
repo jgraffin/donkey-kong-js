@@ -1,6 +1,13 @@
 .app-game {
   display: flex;
   grid-gap: 1rem;
+  background: url("/assets/0.png") center center no-repeat;
+  background-size: 110%;
+  height: 100vh;
+  align-items: center;
+  width: 800px;
+  justify-content: center;
+  position: relative;
 
   &-button {
     display: flex;
@@ -8,44 +15,57 @@
     justify-content: center;
     padding: 1.2rem 1.4rem;
     cursor: pointer;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: transparent;
     border: 0;
-    border-radius: 90px;
 
     &.blue {
-      background-color: #2980b9;
-      border: 6px solid transparent;
+      margin-left: -9px;
+      margin-top: -53px;
+      height: 136px;
+      width: 169px;
 
       &.active {
-        border: 6px solid #6eb5e4;
+        // border: 6px solid #6eb5e4;
       }
     }
 
     &.red {
-      background-color: #e74c3c;
+      margin-left: 288px;
+      margin-top: 130px;
+      height: 148px;
+      width: 153px;
 
       &.active {
-        border: 6px solid #f26e60;
+        background: url("/assets/1-red-glow.png") center center no-repeat;
+        background-size: 140px 130px;
       }
     }
 
     &.yellow {
-      background-color: #f1c40f;
+      margin-left: -27px;
+      margin-top: 295px;
+      height: 120px;
+      width: 164px;
 
       &.active {
-        border: 6px solid #f5d44f;
+        // border: 6px solid #f5d44f;
       }
     }
 
     &.green {
-      background-color: #2ecc71;
+      margin-left: -319px;
+      margin-top: 104px;
+      height: 130px;
+      width: 132px;
 
-      &.active {
-        border: 6px solid #60e296;
+      &.active,
+      &:hover {
+        background: url("/assets/2-green-glow.png") center 6px no-repeat;
+        background-size: 110px 110px;
       }
-    }
-
-    &.active {
-      border: 6px solid #fff !important;
     }
   }
 }
